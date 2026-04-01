@@ -59,17 +59,6 @@ This project applies unsupervised machine learning techniques to identify distin
 
 ---
 
-## 📁 Project Structure
-
-```
-Financial-Data-Analytics/
-├── FDA3.ipynb                 # Main analysis notebook
-├── README.md                  # This file
-├── anthof04.csv              # Dataset (financial metrics for 980+ companies)
-└── results/                  # Output visualizations and reports
-```
-
----
 
 ## 📈 Analysis Workflow
 
@@ -98,26 +87,42 @@ Financial-Data-Analytics/
 ## 🔍 Key Visualizations
 
 ### 1. Pairplot Analysis
+<img width="883" height="884" alt="image" src="https://github.com/user-attachments/assets/e04d26fd-cee1-42db-8b2d-aa129a217699" />
+
 - **Purpose:** Identify correlations and outliers in financial metrics
 - **Finding:** Visible outliers in P/E ratio, debt ratio, and price-to-book metrics
 
 ### 2. Elbow Method Visualization
+<img width="544" height="359" alt="image" src="https://github.com/user-attachments/assets/9356c6e3-871c-48d5-9f51-29d2ccf78d64" />
+
 - **Purpose:** Determine optimal number of clusters using distortion curve
 - **Result:** Clear elbow suggests 6 clusters as optimal balance point
 
 ### 3. Silhouette Score Analysis
+<img width="495" height="386" alt="image" src="https://github.com/user-attachments/assets/a58a6094-e074-4587-b4cf-c9f68d9ed201" />
+
+<img width="495" height="386" alt="image" src="https://github.com/user-attachments/assets/074eed92-fcd3-4873-8878-96b3a6ceb730" />
+
+<img width="512" height="386" alt="image" src="https://github.com/user-attachments/assets/b6c13490-a49c-4175-9608-8b8ec14fba2f" />
+
 - **Purpose:** Evaluate cluster separation across k=2 to 7
 - **Result:** Peak silhouette score at k=4, indicating best within-cluster cohesion
 
 ### 4. Cluster Distribution
+<img width="498" height="359" alt="image" src="https://github.com/user-attachments/assets/0a2ccf8f-29a5-4bf6-bafa-4e971d2db82c" />
+
 - **Purpose:** Show company distribution across identified clusters
 - **Finding:** Balanced distribution with clusters 5, 2, 4 containing majority of companies
 
 ### 5. Mean Metrics by Cluster
+<img width="1171" height="353" alt="image" src="https://github.com/user-attachments/assets/b44d27ba-b47d-4102-a88a-351731b921f2" />
+
 - **Purpose:** Compare financial profiles across clusters
 - **Finding:** Each cluster dominates 1-2 financial metrics, confirming distinct profiles
 
 ### 6. Enterprise Value Heatmap
+<img width="535" height="423" alt="image" src="https://github.com/user-attachments/assets/e194a23e-4612-471e-ac0e-afac70e04020" />
+
 - **Purpose:** Visualize correlation matrix of all variables
 - **Result:** Weak individual correlations with enterprise value, suggesting multivariate effects
 
@@ -154,38 +159,6 @@ Financial-Data-Analytics/
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Python 3.8+
-- Jupyter Notebook
-- Required packages (see Tech Stack)
-
-### Installation
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn plotly yfinance statsmodels yellowbrick
-```
-
-### Running the Analysis
-1. Open `FDA3.ipynb` in Jupyter Notebook
-2. Upload your financial dataset (CSV format with required columns)
-3. Run cells sequentially to reproduce analysis
-4. Modify parameters (k-values, outlier thresholds) for your specific dataset
-
----
-
-## 📝 Dataset Requirements
-
-Your input CSV should contain:
-- `symbol`: Company ticker symbol
-- `beta`: Stock beta coefficient
-- `logMktCap`: Log-transformed market capitalization
-- `peRatioTTM`: Price-to-earnings ratio (trailing twelve months)
-- `debtRatioTTM`: Debt-to-equity ratio (TTM)
-- `priceToBookRatioTTM`: Price-to-book ratio (TTM)
-- `enterpriseValue`: Company enterprise value
-
----
 
 ## 📊 Methodology Notes
 
@@ -196,27 +169,3 @@ Your input CSV should contain:
 **Validation**: Silhouette score (range: -1 to 1) used to validate cluster quality.
 
 ---
-
-## 🤝 Contributing
-
-This project is open for extensions such as:
-- Time-series cluster evolution analysis
-- Additional financial metrics integration
-- Classification model development on clusters
-- Real-time portfolio clustering
-
----
-
-## 📄 License
-
-Open source - feel free to use and modify for educational and commercial purposes.
-
----
-
-## 📧 Questions?
-
-For detailed methodology, refer to the inline documentation and comments in `FDA3.ipynb`.
-
----
-
-**Last Updated**: 2026 | **Python Version**: 3.8+
